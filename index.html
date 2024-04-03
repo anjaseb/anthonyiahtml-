@@ -1,227 +1,240 @@
 
-    
-
-
-  <style>
-*          
-    {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Quicksand', sans-serif;
-    }
-
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 50 vh;
-     background:#393939;
-    }
-    
-
-    section {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        flex-wrap: wrap;
-        overflow: hidden;
-    }
-
-    section::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #00013c;
-        animation: animate s linear infinite;
-    }
-
-    @keyframes animate {
-        70% {
-            transform: translateY(100%);
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
         }
 
-        80% {
-            transform: translateY(100%);
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ffcc00, #ff66cc);
         }
-    }
 
-    section span {
-        position: relative;
-        display: block;
-        width: 2;
-        height: 2;
-        background:#256e6e;
-        z-index: 2;
-        transition: 20s;
-    }
+        section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
 
-    section span:hover {
-        background: rgb(255, 81, 0);
-        transition: 15s;
-    }
+        section::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: -1; 
+        }
 
-    section .signin {
-        position: absolute;
-        width: 400px;
-        background:linear-gradient(#000c80, rgb(255, 81, 0), #008075);;;;
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-        border-radius: 4px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
-    }
+        @keyframes animate {
+            70% {
+                transform: translateY(100%);
+            }
 
-    section .signin .content {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 40px;
-    }
+            80% {
+                transform: translateY(100%);
+            }
+        }
 
-    section .signin .content h2 {
-        font-size: 2em;
-        color: rgb(255, 81, 0);
-        text-transform: uppercase;
-    }
-
-    section .signin .content .form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    section .signin .content .form .inputBox {
-        position: relative;
-        width: 100%;
-    }
-
-    section .signin .content .form .inputBox input {
-        position: relative;
-        width: 100%;
-        background: #000000;
-        border: none;
-        outline: none;
-        padding: 25px 10px 7.5px;
-        border-radius: 4px;
-        color: #003357;
-        font-weight: 500;
-        font-size: 1em;
-    }
-
-    section .signin .content .form .inputBox i {
-        position: absolute;
-        left: 0;
-        padding: 15px 10px;
-        font-style: normal;
-        color: #aaa;
-        transition: 0.5s;
-        pointer-events: none;
-    }
-
-    .signin .content .form .inputBox input:focus~i,
-    .signin .content .form .inputBox input:valid~i {
-        transform: translateY(-7.5px);
-        font-size: 0.8em;
-        color:#fff;
-    }
-
-    .signin .content .form .links {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .signin .content .form .links a {
-        color:#fff;
-        text-decoration: none;
-        background-color:transparent;
-    }
-
-    .signin .content .form .links a:nth-child(2) {
-        color: rgb(255, 81, 0);
-        font-weight: 600;
-    }
-
-    .signin .content .form .inputBox input[type="submit"] {
-        padding: 10px;
-        background: rgb(255, 81, 0);
-        color:#003357;
-        font-weight: 600;
-        font-size: 1.35em;
-        letter-spacing: 0.05em;
-        cursor: pointer;
-    }
-
-    input[type="submit"]:active {
-        opacity: 0.6;
-    }
-
-    @media (max-width: 900px) {
         section span {
-            width: calc(10vw - 2px);
-            height: calc(10vw - 2px);
+            position: relative;
+            display: block;
+            width: 2;
+            height: 2;
+            background:#256e6e;
+            z-index: 2;
+            transition: 20s;
         }
-    }
 
-    @media (max-width: 600px) {
-        section span {
-            width: calc(20vw - 2px);
-            height: calc(20vw - 2px);
+        section span:hover {
+            background: rgb(255, 81, 0);
+            transition: 15s;
         }
-    }   
 
-  </style>
- <html>
- 
- <section>
-        <span></span>
-        <span>linear-gradient(#000c80, rgb(255, 81, 0), #00ff03);</span>
-        <span><img src="2.jpg" alt=""></span>
-        <div class="signin">
-            <div class="content">
-                <h1>CARD OF CLIENTS</h1>
-        <h6>Agency official</h6>        
-              
-                <div class="form">
-                    <div class="links">
-                        
-                        
-                       <h1><a href="mailto:beneditoraul83@gmail.com">E-mail...</a></h1>
-        
-                    </div>
-                    <div class="links">
-                      <h1><a href="">Site...</a></h1>
-                        
-                    </div>
-                    <div class="links">
-                        <h1><a href="">Facebook...</a></h1>
-                        
+        section .signin {
+            position: absolute;
+            width: 400px;
+            background:linear-gradient(#000c80, rgb(255, 81, 0), #008075);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+        }
 
-                    </div>
-                    <div class="Links">
-                     <h1><a href="tel:+244939162741">Telefone...</a></h1> 
-                     </div>
-                    <div class="links">
-                    <h1><a href=""> Whatsapp...</a></h1></div>
-                    </div>
-               <p>Copyright by Beneditoraul2024</p>
-               </div>
-               </div>
-              <img src="1.jpg" alt="erro">
-             </section>   
-             </body>
-      </html>
-      
+        section .signin .content {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        section .signin .content h2 {
+            font-size: 2em;
+            color: rgb(255, 81, 0);
+            text-transform: uppercase;
+        }
+
+        section .signin .content .form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        section .signin .content .form .inputBox {
+            position: relative;
+            width: 100%;
+        }
+
+        section .signin .content .form .inputBox input {
+            position: relative;
+            width: 100%;
+            background: #000000;
+            border: none;
+            outline: none;
+            padding: 25px 10px 7.5px;
+            border-radius: 4px;
+            color: #003357;
+            font-weight: 500;
+            font-size: 1em;
+        }
+
+        section .signin .content .form .inputBox i {
+            position: absolute;
+            left: 0;
+            padding: 15px 10px;
+            font-style: normal;
+            color: #aaa;
+            transition: 0.5s;
+            pointer-events: none;
+        }
+
+        .signin .content .form .inputBox input:focus~i,
+        .signin .content .form .inputBox input:valid~i {
+            transform: translateY(-7.5px);
+            font-size: 0.8em;
+            color:#fff;
+        }
+
+        .signin .content .form .links {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .signin .content .form .links a {
+            color:#fff;
+            text-decoration: none;
+            background-color:transparent;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .signin .content .form .links a:hover {
+            background-color: rgba(255, 81, 0, 0.8);
+        }
+
+        .signin .content .form .links a:nth-child(2) {
+            color: rgb(255, 81, 0);
+            font-weight: 600;
+        }
+
+        .signin .content .form .inputBox input[type="submit"] {
+            padding: 10px;
+            background: rgb(255, 81, 0);
+            color:#003357;
+            font-weight: 600;
+            font-size: 1.35em;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .signin .content .form .inputBox input[type="submit"]:hover {
+            opacity: 0.6;
+        }
+
+        @media (max-width: 900px) {
+            section span {
+                width: calc(10vw - 2px);
+                height: calc(10vw - 2px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            section span {
+                width: calc(20vw - 2px);
+                height: calc(20vw - 2px);
+            }
+        }   
+
+    </style>
+</head>
+<body>
+
+<section>
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="signin">
+        <div class="content">
+            <h1>CARD OF VISITE</h1>
+            <div style="border-radius: 50%; border: 9px solid black; width: 80px; height: 100px; display:  inline-block;"></div>
+            <h6> <>Benedito raul <> (convite codial)<> </h6>
+            <div class="form">
+                <div class="links">
+                    <h1><a href="mailto:beneditoraul83@gmail.com">Email...</a></h1>
+                </div>
+                <div class="links">
+                    <h1><a href="">Site...</a></h1>
+                </div>
+                <div class="links">
+                    <h1><a href="https://www.facebook.com/benedito.raul.1">Facebook...</a></h1>
+                </div>
+                <div class="links">                
+                    <h1><a href="https://maps.app.goo.gl/whxpEcSNMPYHDS6P9">Localização...</a></h1>
+                </div>
+                <div class="Links">
+                    <h1><a href="tel:+244939162741">telefone...</a></h1> 
+                </div>
+                <div class="links">
+                    <h1><a href="https://wa.me/qr/7I6ULM2EQ7F6K1"> Whatsapp...</a></h1>
+                </div>
+                <div class="links">
+                    <h1><a href="https://www.Instagram.com/beneditoraul">Instagram...</a></h1>
+                </div>
+                <div class="links">
+                    <h1><a href="Achei que talvez gostasses das ideias que esta pessoa tem guardado no Pinterest... https://pin.it/19K0fYBgX">Pinterest...</a></h1>
+                </div>
+                <div class="links">
+                    <h1><a href="https://www.tiktok.com/@beneditoraul?_t=8lCLpg0G1xu&_r=1">TikTok...</a></h1>
+                </div>
+            </div>
+            <p>Copyright by Beneditoraul2024</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
