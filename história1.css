@@ -1,0 +1,22 @@
+body{
+  background-color:hsla(246, 100%, 6%, 1);
+}
+h1{
+  color: rgba(255, 0, 170, 1);
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 1px 1px 9px hsla(332, 0%, 100%, 1);
+}
+h3{
+  color: hsla(332, 100%, 31%, 1);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 9px rgba(255, 0, 170, 1);
+  
+}
+p{
+    box-shadow: 1px 1px 9px hsla(332, 0%, 100%, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    border-radius: 20px;
+}

@@ -1,0 +1,22 @@
+body {
+      background-color: rgba(0, 59, 41, 1);
+      color: rgba(0, 40, 28, 1);
+      text-align: center;
+}
+h1{
+    box-shadow: 1px 1px 9px hsla(332, 0%, 100%, 1);
+}
+  img{
+   
+    border-radius:10;
+    height: 100px;
+    width: 100;
+    overflow: hidden;
+    position: absolute;
+    
+  }
+  img{
+    top:50;
+    left:50;
+    transform: translate(-50, -50);
+  }
